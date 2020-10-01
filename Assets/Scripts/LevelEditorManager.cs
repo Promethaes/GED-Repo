@@ -8,7 +8,6 @@ public class LevelEditorManager : MonoBehaviour
     public List<GameObject> SpawnButtons;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
