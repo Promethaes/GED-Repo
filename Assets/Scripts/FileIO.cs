@@ -57,6 +57,17 @@ public class FileIO : MonoBehaviour
 
     public void Load()
     {
+
+        for (int i = 0; i < manager.objects.Count; i++)
+        {
+            if (manager.objects[i].gameObject.activeSelf)
+            {
+                manager.objects[i].DeleteSelf();
+                manager.objects.RemoveAt(i);
+                i--;
+            }
+        }
+
         reader = new StreamReader(loadPath.text);
 
         int numObjects = 0;
@@ -82,7 +93,6 @@ public class FileIO : MonoBehaviour
             {
                 if (tempName.Contains(manager.prefabs[i].name))
                 {
-                    string t = "abcdef";
                     var temp = GameObject.Instantiate(manager.prefabs[i]);
                     temp.GetComponent<DisableOnStartup>().disable = false;
 

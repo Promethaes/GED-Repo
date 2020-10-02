@@ -13,6 +13,11 @@ public class IsObject : MonoBehaviour
         manager.objects.Add(this);
     }
 
+    public void DeleteSelf()
+    {
+        Destroy(gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {
