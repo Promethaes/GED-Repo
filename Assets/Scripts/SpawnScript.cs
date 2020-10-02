@@ -19,7 +19,7 @@ public class SpawnScript : MonoBehaviour
         var temp = GameObject.Instantiate(prefab);
         temp.GetComponent<DisableOnStartup>().disable = false;
         temp.SetActive(true);
-        temp.transform.position = new Vector3(0.0f, 5.0f, 0.0f);
+        temp.transform.position = new Vector3(0.0f, 1.0f, 0.0f);
     }
 
     // Update is called once per frame
