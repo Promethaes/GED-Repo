@@ -18,6 +18,7 @@ public class SpawnScript : MonoBehaviour
     {
         var temp = GameObject.Instantiate(prefab);
         temp.GetComponent<DisableOnStartup>().disable = false;
+        temp.GetComponent<IsObject>().doNotAddToList = false;
         temp.SetActive(true);
         temp.transform.position = new Vector3(0.0f, 1.0f, 0.0f);
     }

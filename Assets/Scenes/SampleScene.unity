@@ -3200,6 +3200,11 @@ PrefabInstance:
       propertyPath: tManager
       value: 
       objectReference: {fileID: 161859184}
+    - target: {fileID: 6983627252591032420, guid: 417f35c5812e6c44d9ab8fbfbf7bcb9f,
+        type: 3}
+      propertyPath: doNotAddToList
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 417f35c5812e6c44d9ab8fbfbf7bcb9f, type: 3}
 --- !u!1 &1334454197
@@ -4224,6 +4229,7 @@ MonoBehaviour:
   manager: {fileID: 750139016}
   name: Rock
   tManager: {fileID: 161859184}
+  doNotAddToList: 1
 --- !u!65 &1476297122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5851,6 +5857,11 @@ PrefabInstance:
       propertyPath: tManager
       value: 
       objectReference: {fileID: 161859184}
+    - target: {fileID: 3001186196605555849, guid: 6dad98a1568925249a5f72466d2b3539,
+        type: 3}
+      propertyPath: doNotAddToList
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4892469005156440990, guid: 6dad98a1568925249a5f72466d2b3539, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6dad98a1568925249a5f72466d2b3539, type: 3}

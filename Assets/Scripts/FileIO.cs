@@ -116,6 +116,7 @@ public class FileIO : MonoBehaviour
 
                     reader.ReadLine();
 
+                    temp.gameObject.GetComponent<IsObject>().doNotAddToList = false;
                     temp.gameObject.SetActive(true);
                 }
             }

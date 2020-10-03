@@ -7,11 +7,13 @@ public class IsObject : MonoBehaviour
     public ObjectManager manager;
     public string name;
     public TranslateManager tManager;
+    public bool doNotAddToList = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        manager.objects.Add(this);
+        if (!doNotAddToList)
+            manager.objects.Add(this);
     }
 
     public void DeleteSelf()
@@ -22,12 +24,12 @@ public class IsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnMouseOver()
     {
-        Debug.Log("Works"); 
+        Debug.Log("Works");
     }
 
     private void OnMouseDown()
