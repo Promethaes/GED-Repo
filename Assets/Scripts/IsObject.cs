@@ -6,6 +6,7 @@ public class IsObject : MonoBehaviour
 {
     public ObjectManager manager;
     public string name;
+    public TranslateManager tManager;
 
     // Start is called before the first frame update
     void Start()
@@ -23,4 +24,16 @@ public class IsObject : MonoBehaviour
     {
         
     }
+
+    private void OnMouseOver()
+    {
+        Debug.Log("Works"); 
+    }
+
+    private void OnMouseDown()
+    {
+        tManager.selectedGameObject = gameObject;
+    }
+
+
 }
