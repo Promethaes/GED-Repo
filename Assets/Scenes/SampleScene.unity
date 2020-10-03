@@ -1234,7 +1234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 222.13004, y: 137}
+  m_AnchoredPosition: {x: 224.8, y: 137}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &346897545
@@ -1987,7 +1987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77.745, y: 32.7}
+  m_AnchoredPosition: {x: 225.7, y: 111}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738362823
@@ -4126,7 +4126,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4fdc9247012e6d34a9be0b1cf316ba18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.27
+      value: -5.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4fdc9247012e6d34a9be0b1cf316ba18,
         type: 3}
@@ -4224,6 +4224,19 @@ MonoBehaviour:
   manager: {fileID: 750139016}
   name: Rock
   tManager: {fileID: 161859184}
+--- !u!65 &1476297122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476297119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9349222, y: 1.8106227, z: 2.280283}
+  m_Center: {x: -1.1867294, y: 1.5177796, z: -3.2633314}
 --- !u!1 &1497568002
 GameObject:
   m_ObjectHideFlags: 0
