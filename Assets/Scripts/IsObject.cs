@@ -29,7 +29,6 @@ public class IsObject : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Debug.Log("Works");
     }
 
     private void OnMouseDown()

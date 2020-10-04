@@ -25,6 +25,8 @@ public class PlayerMove : MonoBehaviour
     bool isJumping;
     public bool ourPlayMode = false;
 
+    public GameObject camera;
+
     void Awake()
     {
         charController = GetComponent<CharacterController>();
@@ -35,7 +37,17 @@ public class PlayerMove : MonoBehaviour
         if (ourPlayMode)
         {
             PlayerMovement();
+            camera.transform.position = gameObject.transform.position - new Vector3(0.0f, -10.0f, 10.0f);
+            camera.transform.LookAt(gameObject.transform);
+
         }
+        else
+        {
+            camera.transform.position = new Vector3(0.0f, 3.49f, -10.0f);
+            camera.transform.rotation = Quaternion.Euler(22.79f, 0.0f, 0.0f);
+        }
+
+
     }
 
     private void PlayerMovement()
