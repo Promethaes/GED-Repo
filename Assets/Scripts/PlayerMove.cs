@@ -23,6 +23,7 @@ public class PlayerMove : MonoBehaviour
     private CharacterController charController;
     private float movementSpeed;
     bool isJumping;
+    public bool ourPlayMode = false;
 
     void Awake()
     {
@@ -31,7 +32,10 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        PlayerMovement();
+        if (ourPlayMode)
+        {
+            PlayerMovement();
+        }
     }
 
     private void PlayerMovement()
