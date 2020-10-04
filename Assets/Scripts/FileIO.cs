@@ -82,39 +82,44 @@ public class FileIO : MonoBehaviour
 
         reader.Close();
 
+        var currentLine = "";
         reader = new StreamReader(loadPath.text);
-
-        for (int i = 0; i < manager.prefabs.Count; i++)
+        for (int j = 0; j < numObjects; j++)
         {
+            currentLine = reader.ReadLine();
 
-            var tempName = reader.ReadLine();
-
-            if (tempName.Contains(manager.prefabs[i].GetComponent<IsObject>().name))
+            for (int i = 0; i < manager.prefabs.Count; i++)
             {
-                var temp = GameObject.Instantiate(manager.prefabs[i]);
-                temp.GetComponent<DisableOnStartup>().disable = false;
 
-                var x = reader.ReadLine();
-                var y = reader.ReadLine();
-                var z = reader.ReadLine();
+                if (currentLine.Contains(manager.prefabs[i].GetComponent<IsObject>().name))
+                {
+                    var temp = GameObject.Instantiate(manager.prefabs[i]);
+                    temp.GetComponent<DisableOnStartup>().disable = false;
 
-                temp.gameObject.transform.position = new Vector3(float.Parse(x), float.Parse(y), float.Parse(z));
+                    var x = reader.ReadLine();
+                    var y = reader.ReadLine();
+                    var z = reader.ReadLine();
 
-                x = reader.ReadLine();
-                y = reader.ReadLine();
-                z = reader.ReadLine();
-                var w = reader.ReadLine();
-                temp.gameObject.transform.rotation = new Quaternion(float.Parse(x), float.Parse(y), float.Parse(z), float.Parse(w));
+                    temp.gameObject.transform.position = new Vector3(float.Parse(x), float.Parse(y), float.Parse(z));
 
-
-                x = reader.ReadLine();
-                y = reader.ReadLine();
-                z = reader.ReadLine();
-                temp.gameObject.transform.localScale = new Vector3(float.Parse(x), float.Parse(y), float.Parse(z));
+                    x = reader.ReadLine();
+                    y = reader.ReadLine();
+                    z = reader.ReadLine();
+                    var w = reader.ReadLine();
+                    temp.gameObject.transform.rotation = new Quaternion(float.Parse(x), float.Parse(y), float.Parse(z), float.Parse(w));
 
 
-                temp.gameObject.GetComponent<IsObject>().doNotAddToList = false;
-                temp.gameObject.SetActive(true);
+                    x = reader.ReadLine();
+                    y = reader.ReadLine();
+                    z = reader.ReadLine();
+                    temp.gameObject.transform.localScale = new Vector3(float.Parse(x), float.Parse(y), float.Parse(z));
+
+
+                    temp.gameObject.GetComponent<IsObject>().doNotAddToList = false;
+                    temp.gameObject.SetActive(true);
+                    break;
+                }
+
             }
 
         }
