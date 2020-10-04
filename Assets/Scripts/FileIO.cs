@@ -91,7 +91,7 @@ public class FileIO : MonoBehaviour
 
             for (int j = 0; j < numObjects; j++)
             {
-                if (tempName.Contains(manager.prefabs[i].name))
+                if (tempName.Contains(manager.prefabs[i].GetComponent<IsObject>().name))
                 {
                     var temp = GameObject.Instantiate(manager.prefabs[i]);
                     temp.GetComponent<DisableOnStartup>().disable = false;

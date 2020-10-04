@@ -6,7 +6,7 @@ public class ObjectManager : MonoBehaviour
 {
     public List<IsObject> objects = new List<IsObject>();
 
-    public List<IsObject> prefabs;
+    public List<GameObject> prefabs;
     // Start is called before the first frame update
     void Start()
     {

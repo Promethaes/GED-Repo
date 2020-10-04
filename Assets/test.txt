@@ -1,18 +1,161 @@
-!object: Cube
-2.3221
+!object: PLight
+0
 1
--3.68686
 0
 0
 0
+0
 1
 1
 1
 1
-!object: Cube
--2.26541
-2.48742
--2.27079
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
+0
+0
+0
+1
+1
+1
+1
+!object: PLight
+0
+1
+0
 0
 0
 0

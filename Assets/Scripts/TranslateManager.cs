@@ -9,10 +9,21 @@ public class TranslateManager : MonoBehaviour
 
     float fMoveBy = 0.0f;
 
+    public List<GameObject> buttons;
+
     // Start is called before the first frame update
     void Start()
     {
+        toggleButtonMenu();
+    }
 
+    bool toggle = false;
+    public void toggleButtonMenu()
+    {
+        for (int i = 0; i < buttons.Count; i++)
+            buttons[i].SetActive(toggle);
+
+        toggle = !toggle;
     }
 
     public void pX()
