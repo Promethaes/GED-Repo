@@ -2,16 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnScript : MonoBehaviour
+public class SpawnScript : Command
 {
 
     public GameObject prefab;
-
+    List<GameObject> spawnedObjects;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Assert(prefab.GetComponent<IsObject>());
+        spawnedObjects = new List<GameObject>();
+    }
+
+
+    protected override void execute()
+    {
+        SpawnObject();
+    }
+    protected override void undo()
+    {
+        int i = spawnedObjects.Count - 1;
+        if (i < 0)
+            return;
+        var objectManager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
+        objectManager.objects.Remove(spawnedObjects[i].GetComponent<IsObject>());
+        GameObject.Destroy(spawnedObjects[i]);
+        spawnedObjects.RemoveAt(i);
     }
 
     public void SpawnObject()
@@ -21,6 +37,7 @@ public class SpawnScript : MonoBehaviour
         temp.GetComponent<IsObject>().doNotAddToList = false;
         temp.SetActive(true);
         temp.transform.position = new Vector3(0.0f, 1.0f, 0.0f);
+        spawnedObjects.Add(temp);
 
         if (prefab.GetComponent<IsObject>().name == "Player")
             gameObject.SetActive(false);

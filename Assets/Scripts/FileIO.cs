@@ -32,7 +32,7 @@ public class FileIO : MonoBehaviour
 
         for (int i = 0; i < manager.objects.Count; i++)
         {
-            if (manager.objects[i].name == "Player")
+            if (manager.objects[i].name == "Player" || !manager.objects[i].gameObject.activeSelf)
                 continue;
 
             writer.WriteLine("!object: " + manager.objects[i].name);
