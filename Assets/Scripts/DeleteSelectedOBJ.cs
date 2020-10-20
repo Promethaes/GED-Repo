@@ -31,6 +31,9 @@ public class DeleteSelectedOBJ : Command
 
     protected override void undo()
     {
+        if (deletedGameObjects.Count == 0)
+            return;
+
         deletedGameObjects[deletedGameObjects.Count - 1].SetActive(true);
         tManager.selectedGameObject = deletedGameObjects[deletedGameObjects.Count - 1];
         objectManager.objects.Add(tManager.selectedGameObject.GetComponent<IsObject>());

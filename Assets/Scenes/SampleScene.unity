@@ -577,6 +577,7 @@ GameObject:
   - component: {fileID: 112699822}
   - component: {fileID: 112699821}
   - component: {fileID: 112699820}
+  - component: {fileID: 112699823}
   m_Layer: 0
   m_Name: xP
   m_TagString: Untagged
@@ -647,16 +648,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 161859184}
-        m_MethodName: pX
-        m_Mode: 1
+      - m_Target: {fileID: 112699823}
+        m_MethodName: TrackAndExecute
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &112699821
 MonoBehaviour:
@@ -695,6 +696,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112699818}
   m_CullTransparentMesh: 0
+--- !u!114 &112699823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112699818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902731cd829e33a4e9725cd78581550c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  direction: {x: 1, y: 0, z: 0}
 --- !u!1 &161859182
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveBy: {fileID: 1096744029}
   selectedGameObject: {fileID: 0}
+  fMoveBy: 0
   buttons:
   - {fileID: 1130703254}
   - {fileID: 1731203656}
@@ -976,6 +992,7 @@ GameObject:
   - component: {fileID: 250640825}
   - component: {fileID: 250640824}
   - component: {fileID: 250640823}
+  - component: {fileID: 250640826}
   m_Layer: 0
   m_Name: xN
   m_TagString: Untagged
@@ -1046,16 +1063,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 161859184}
-        m_MethodName: nX
-        m_Mode: 1
+      - m_Target: {fileID: 250640826}
+        m_MethodName: TrackAndExecute
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &250640824
 MonoBehaviour:
@@ -1094,6 +1111,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250640821}
   m_CullTransparentMesh: 0
+--- !u!114 &250640826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250640821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902731cd829e33a4e9725cd78581550c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  direction: {x: -1, y: 0, z: 0}
 --- !u!1 &269368885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,6 +1400,7 @@ GameObject:
   - component: {fileID: 346897547}
   - component: {fileID: 346897546}
   - component: {fileID: 346897545}
+  - component: {fileID: 346897548}
   m_Layer: 0
   m_Name: zP
   m_TagString: Untagged
@@ -1439,16 +1471,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 161859184}
-        m_MethodName: pZ
-        m_Mode: 1
+      - m_Target: {fileID: 346897548}
+        m_MethodName: TrackAndExecute
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &346897546
 MonoBehaviour:
@@ -1487,6 +1519,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346897543}
   m_CullTransparentMesh: 0
+--- !u!114 &346897548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346897543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902731cd829e33a4e9725cd78581550c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  direction: {x: 0, y: 0, z: 1}
 --- !u!1 &352787592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2143,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &628523290
 MonoBehaviour:
@@ -2685,6 +2731,7 @@ GameObject:
   - component: {fileID: 738362825}
   - component: {fileID: 738362824}
   - component: {fileID: 738362823}
+  - component: {fileID: 738362826}
   m_Layer: 0
   m_Name: zN
   m_TagString: Untagged
@@ -2755,16 +2802,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 161859184}
-        m_MethodName: nZ
-        m_Mode: 1
+      - m_Target: {fileID: 738362826}
+        m_MethodName: TrackAndExecute
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &738362824
 MonoBehaviour:
@@ -2803,6 +2850,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738362821}
   m_CullTransparentMesh: 0
+--- !u!114 &738362826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738362821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902731cd829e33a4e9725cd78581550c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  direction: {x: 0, y: 0, z: -1}
 --- !u!1 &739849037
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,6 +3928,7 @@ GameObject:
   - component: {fileID: 1130703258}
   - component: {fileID: 1130703257}
   - component: {fileID: 1130703256}
+  - component: {fileID: 1130703259}
   m_Layer: 0
   m_Name: yP
   m_TagString: Untagged
@@ -3937,16 +3999,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 161859184}
-        m_MethodName: pY
-        m_Mode: 1
+      - m_Target: {fileID: 1130703259}
+        m_MethodName: TrackAndExecute
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1130703257
 MonoBehaviour:
@@ -3985,6 +4047,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130703254}
   m_CullTransparentMesh: 0
+--- !u!114 &1130703259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130703254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902731cd829e33a4e9725cd78581550c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  direction: {x: 0, y: 1, z: 0}
 --- !u!1 &1160329452
 GameObject:
   m_ObjectHideFlags: 0
@@ -6095,6 +6171,7 @@ GameObject:
   - component: {fileID: 1731203660}
   - component: {fileID: 1731203659}
   - component: {fileID: 1731203658}
+  - component: {fileID: 1731203661}
   m_Layer: 0
   m_Name: yN
   m_TagString: Untagged
@@ -6165,16 +6242,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 161859184}
-        m_MethodName: nY
-        m_Mode: 1
+      - m_Target: {fileID: 1731203661}
+        m_MethodName: TrackAndExecute
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1731203659
 MonoBehaviour:
@@ -6213,6 +6290,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731203656}
   m_CullTransparentMesh: 0
+--- !u!114 &1731203661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731203656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902731cd829e33a4e9725cd78581550c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  direction: {x: 0, y: -1, z: 0}
 --- !u!1 &1807649082
 GameObject:
   m_ObjectHideFlags: 0

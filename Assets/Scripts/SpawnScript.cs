@@ -6,12 +6,13 @@ public class SpawnScript : Command
 {
 
     public GameObject prefab;
-    List<GameObject> spawnedObjects;
+    public List<GameObject> spawnedObjects = new List<GameObject>();
+    public List<GameObject> despawnedObjects = new List<GameObject>();
+    public int maxNumInactives = 3;//max number of inactive despawned objects before they start becoming deleted
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnedObjects = new List<GameObject>();
     }
 
 
@@ -21,13 +22,9 @@ public class SpawnScript : Command
     }
     protected override void undo()
     {
-        int i = spawnedObjects.Count - 1;
-        if (i < 0)
-            return;
-        var objectManager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
-        objectManager.objects.Remove(spawnedObjects[i].GetComponent<IsObject>());
-        GameObject.Destroy(spawnedObjects[i]);
-        spawnedObjects.RemoveAt(i);
+        spawnedObjects[spawnedObjects.Count - 1].SetActive(false);
+        despawnedObjects.Add(spawnedObjects[spawnedObjects.Count - 1]);
+        spawnedObjects.RemoveAt(spawnedObjects.Count - 1);
     }
 
     public void SpawnObject()

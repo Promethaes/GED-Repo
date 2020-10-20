@@ -6,7 +6,7 @@ public class IsObject : MonoBehaviour
 {
     public ObjectManager manager;
     public string name;
-    public TranslateManager tManager;
+    public TManagerSelect tSelect;
     public bool doNotAddToList = false;
 
     // Start is called before the first frame update
@@ -14,6 +14,7 @@ public class IsObject : MonoBehaviour
     {
         if (!doNotAddToList)
             manager.objects.Add(this);
+        tSelect = GameObject.Find("TManagerSelect").GetComponent<TManagerSelect>();
     }
 
     public void DeleteSelf()
@@ -24,7 +25,6 @@ public class IsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     private void OnMouseOver()
@@ -33,7 +33,8 @@ public class IsObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        tManager.selectedGameObject = gameObject;
+        tSelect.selected = gameObject;
+        tSelect.TrackAndExecute();
     }
 
 
