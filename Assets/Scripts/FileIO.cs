@@ -24,7 +24,7 @@ public class FileIO : MonoBehaviour
 
     public void Save()
     {
-
+        char[] chars = { 'w', 'o' };
         if (!savePath.text.Contains(".txt"))
             return;
 
