@@ -33,3 +33,18 @@ void Save()
 {
 	f.Save();
 }
+
+void Load()
+{
+	f.Load();
+}
+
+int GetNumTransforms()
+{
+	return f.savedData.size();
+}
+
+TransformData GetTransformAt(int index)
+{
+	return f.savedData[index];
+}

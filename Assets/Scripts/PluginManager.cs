@@ -8,12 +8,13 @@ public class PluginManager : MonoBehaviour
 {
     private const string dllName = "FileIOPro";
 
+    public GameObject prefab;
 	
     [StructLayout(LayoutKind.Sequential)] public struct TransformData
     {
-        float xpos, ypos, zpos;
-        float xrot, yrot, zrot, wrot;
-        float xscale, yscale, zscale;
+        public float xpos, ypos, zpos;
+        public float xrot, yrot, zrot, wrot;
+        public float xscale, yscale, zscale;
     }
 
 	[DllImport(dllName)]
@@ -23,9 +24,16 @@ public class PluginManager : MonoBehaviour
 	public static extern void ClearAllSavedTransformData();
 	[DllImport(dllName)]
 	public static extern void Save();
+    [DllImport(dllName)]
+    public static extern void Load();
+
+    [DllImport(dllName)]
+    public static extern int GetNumTransforms();
+    [DllImport(dllName)]
+    public static extern TransformData GetTransformAt(int index);
 
 
-	public void SaveAllObjectsToFile()
+    public void SaveAllObjectsToFile()
     {
 		var objManager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
 
@@ -49,10 +57,33 @@ public class PluginManager : MonoBehaviour
                 );
         }
 
+        Save();
+
     }
 
-	// Start is called before the first frame update
-	void Start()
+    public void LoadLevelFromFile()
+    {
+        var objManager = GameObject.Find("ObjectManager").GetComponent<ObjectManager>();
+
+        Load();
+
+        for(int i = 0; i < GetNumTransforms(); i++)
+        {
+            var temp = GameObject.Instantiate(prefab);
+            temp.GetComponent<DisableOnStartup>().disable = false;
+            temp.GetComponent<IsObject>().doNotAddToList = false;
+            temp.SetActive(true);
+            temp.transform.position = new Vector3(GetTransformAt(i).xpos, GetTransformAt(i).ypos, GetTransformAt(i).zpos);
+            temp.transform.localScale = new Vector3(GetTransformAt(i).xscale, GetTransformAt(i).yscale, GetTransformAt(i).zscale);
+            temp.transform.rotation = new Quaternion(GetTransformAt(i).xrot, GetTransformAt(i).yrot, GetTransformAt(i).zrot, GetTransformAt(i).wrot);
+
+        }
+
+    }
+
+
+    // Start is called before the first frame update
+    void Start()
     {
         
     }
